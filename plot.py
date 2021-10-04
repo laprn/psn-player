@@ -1,13 +1,16 @@
+import pandas as pd
 import seaborn as sns
+from matplotlib import pyplot as plt
 
+
+df = pd.read_csv('./psn_level.csv', sep=',')
+df.columns = ['level']
+print(df.head())
 sns.set_theme()
 
 # Load an example dataset
-tips = sns.load_dataset('psn_level.csv')
+# data = sns.load_dataset('./psn_level.csv')
 
 # Create a visualization
-sns.relplot(
-    data=tips,
-    x="total_bill", y="tip", col="time",
-    hue="smoker", style="smoker", size="size",
-)
+sns.histplot(df.level)
+plt.show()
