@@ -3,13 +3,12 @@ from bs4 import BeautifulSoup
 import numpy as np
 
 URL :str = 'https://psnprofiles.com/leaderboard/all/jp'
-# LASTPAGE: int = 6656
-LASTPAGE: int = 10
+LASTPAGE: int = 6656
+# LASTPAGE: int = 10
 
 def query(page: int) -> dict:
     return {'page': page}
 
-# def save
 def main():
     level_list = np.array([])
 
