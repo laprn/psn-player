@@ -24,6 +24,7 @@ def plot():
     # plt.hist(log_data, bins=int(1600/10))
     plt.xlabel('level')
     plt.ylabel('count')
+    plt.savefig('./psn-player.png')
     plt.show()
 
 if __name__ == '__main__':
